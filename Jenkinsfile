@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Validate') {
             steps {
-                echo 'Validating...'
+                sh 'node --version'
+                sh 'npm --version'
+                sh 'spectral --version'
             }
         }
         stage('Deploy') {
